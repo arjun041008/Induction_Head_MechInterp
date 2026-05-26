@@ -25,17 +25,24 @@ Mean Recovery Rate ≈ 0.965 ± 0.15
 ```text
 .
 ├── notebooks/
-│   ├── induction_head_identification.ipynb
-│   ├── local_repetition_analysis.ipynb
-│   ├── entropy_analysis.ipynb
-│   └── activation_patching.ipynb
-│
-├── figures/
-│   └── ...
+│   ├── Ablated_Head_vs_LRR.ipynb
+│   ├── Activation_Patching.ipynb
+│   ├── GPT2Medium_Generalization.ipynb
+│   ├── LRR_Entropy_Control_Trial.ipynb
+│   └── LRR_post_ablation.ipynb
 │
 ├── paper/
-│   └── paper.pdf
+|   ├── Figure_1.png
+│   ├── Figure_2.png
+│   ├── Figure_3.png
+│   ├── Figure_4.png
+|   ├── Figure_5.png
+│   ├── Figure_6.png
+│   ├── main.tex
+│   └── references.bib
 │
+├── paper.pdf
+|
 ├── requirements.txt
 │
 └── README.md
@@ -58,22 +65,21 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run notebooks in the following order:
-
-1. `induction_head_identification.ipynb`
-2. `local_repetition_analysis.ipynb`
-3. `entropy_analysis.ipynb`
-4. `activation_patching.ipynb`
 
 Google Colab was used for all experiments.
 
-## Paper
+## Notebooks
 
-The accompanying paper is available in:
+- **`Ablated_Head_vs_LRR.ipynb`** – Analyzes the relationship between the number of ablated induction heads and changes in the Local Repetition Rate (LRR), investigating potential non-linear effects of progressive ablation.
 
-```text
-paper/paper.pdf
-```
+- **`Activation_Patching.ipynb`** – Implements activation patching experiments to verify the causal contribution of induction heads by measuring recovery of model behavior after restoring patched activations.
+
+- **`GPT2Medium_Generalization.ipynb`** – Extends the analysis to GPT-2 Medium to evaluate whether induction head behavior and repetition dynamics generalize across model scales.
+
+- **`LRR_Entropy_Control_Trial.ipynb`** – Performs control experiments examining only the Local Repetition Rate (LRR) and includes additional analysis with entropy to further contextualize the results.
+
+- **`LRR_post_ablation.ipynb`** – Measures final LRR changes due to ablation, summarizing the reported outcomes of induction head removal on repetition behavior across sequences.
+
 
 ## License
 
