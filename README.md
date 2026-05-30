@@ -25,11 +25,11 @@ Mean Recovery Rate ≈ 0.965 ± 0.15
 ```text
 .
 ├── notebooks/
-│   ├── Ablated_Head_vs_LRR.ipynb
-│   ├── Activation_Patching.ipynb
-│   ├── GPT2Medium_Generalization.ipynb
-│   ├── LRR_Entropy_Control_Trial.ipynb
-│   └── LRR_post_ablation.ipynb
+│   ├── Ablated_Head_vs_LRR.py
+│   ├── Activation_Patching.py
+│   ├── GPT2Medium_Generalization.py
+│   ├── LRR_Entropy_Control_Trial.py
+│   └── LRR_post_ablation.py
 │
 ├── paper/
 |   ├── Figure_1.png
